@@ -86,8 +86,6 @@ void TrafficLight::cycleThroughPhases()
 
             //TODO: send an update
             _messages.send(std::move(_currentPhase));
-            std::lock_guard<std::mutex> coutlk(_mtx);
-            std::cout << this << " toogle to " << _currentPhase << std::endl;
         }
 
     }
